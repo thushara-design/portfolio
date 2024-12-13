@@ -1,38 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <title>Little Lemon</title>
-
-  <meta property="og:title" content="Our Menu">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="C:\Users\chip\Desktop\code\Gistly figma file.png">
-  <meta property="og:url" content="https://littlelemon/">
-  <meta property="og:description"
-    content="Little Lemon is a family-owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.">
-  <meta property="og:locale" content="en_US">
-  <meta property="og:site_name" content="Little Lemon">
-
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thushara's UX Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <form>
-      <div>
-        <label for="username"> Username </label>
-        <input type="text" id="username" required maxlength="2">
-      </div>
-      <div>
-        <label for="password"> Password </label>
-        <input type="password" id="password" required maxlength="2">
-      </div>
-    </form>
+    <!-- Navigation Section -->
     <header>
-      <img src="C:\Users\chip\Desktop\code\Gistly figma file.png" alt="Little Lemon Logo">
+        <nav>
+            <div class="container">
+                <h1 class="logo">Thushara</h1>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#work">Work</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
     </header>
-    <main>
-  
-    </main>
-  </body>
-  
-  </html>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h2>Hi, I'm Thushara</h2>
+            <p>I design beautiful and intuitive digital experiences.</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>I'm a passionate UX designer who loves creating meaningful and user-friendly experiences. My goal is to bridge the gap between user needs and technology.</p>
+        </div>
+    </section>
+
+    <!-- Work Section -->
+    <section id="work" class="work">
+        <div class="container">
+            <h2>My Work</h2>
+            <div class="projects">
+                <div class="project-card">
+                    <h3>Project 1</h3>
+                    <p>Description of the project.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Project 2</h3>
+                    <p>Description of the project.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Project 3</h3>
+                    <p>Description of the project.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <p>If you'd like to work with me or just say hello, feel free to reach out!</p>
+            <a href="mailto:thushara@example.com" class="contact-btn">Contact Me</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Thushara. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
