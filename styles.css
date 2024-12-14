@@ -13,15 +13,20 @@ body {
 }
 
 /* Navigation bar */
+/* Navigation Bar */
 header {
   background-color: #333;
   color: #fff;
-  padding: 20px 0;
+  height: 70px;  /* Set the height of the navbar to 70px */
+  padding: 0 20px;  /* Add some horizontal padding for spacing */
+  display: flex;
+  align-items: center;  /* Center the items vertically */
+  justify-content: space-between;  /* Space out the logo and links */
 }
 
 header .logo {
-  display: inline-block;
-  font-size: 24px;
+  font-size: 24px;  /* Adjust logo size to fit within the 70px height */
+  font-family: 'Lato', sans-serif;
 }
 
 nav ul {
@@ -29,11 +34,13 @@ nav ul {
   padding: 0;
   margin: 0;
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-end;  /* Align links to the right */
+  height: 100%;
+  align-items: center;  /* Center navigation items vertically */
 }
 
 nav ul li {
-  margin-right: 20px;
+  margin-left: 20px;  /* Add space between links */
 }
 
 nav ul li a {
