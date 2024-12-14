@@ -16,7 +16,7 @@ body {
 /* Navigation Bar */
 header {
   background-color: #FFFFF;
-  color: #fff;
+  color: #000000;
   height: 70px;  /* Set the height of the navbar to 70px */
   padding: 0 20px;  /* Add some horizontal padding for spacing */
   display: flex;
