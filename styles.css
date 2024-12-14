@@ -24,9 +24,9 @@ header {
   justify-content: space-between;  /* Space out the logo and links */
 }
 
-header .logo {
-  font-size: 24px;  /* Adjust logo size to fit within the 70px height */
-  font-family: 'Lato', sans-serif;
+header .logo img {
+  height: 40px; /* Set logo image height to fit within 70px navbar */
+  width: auto; /* Maintain aspect ratio */
 }
 
 nav ul {
