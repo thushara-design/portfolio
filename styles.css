@@ -18,7 +18,7 @@ header {
   background-color: #FFFFFF;
   color: #000000;
   height: 70px;  /* Set the height of the navbar to 70px */
-  padding: 0 20px;  /* Add some horizontal padding for spacing */
+  padding: 0 0px;  /* Add some horizontal padding for spacing */
   display: flex;
   align-items: center;  /* Center the items vertically */
   justify-content: space-between;  /* Space out the logo and links */
