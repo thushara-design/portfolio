@@ -1,56 +1,232 @@
-/* General body styling */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
-}
-
-/* Navigation Bar */
-header {
-  background-color: #333;
-  color: #fff;
-  height: 70px;  /* Set the height of the navbar to 70px */
-  padding: 0 20px;  /* Add some horizontal padding for spacing */
-  display: flex;
-  align-items: center;  /* Center the items vertically */
-  justify-content: space-between;  /* Space out the logo and links */
-}
-
-header .logo img {
-  height: 40px; /* Set logo image height to fit within 70px navbar */
-  width: auto; /* Maintain aspect ratio */
-}
-
-/* Navigation links */
-nav ul {
-  list-style: none;
+/* General Styles */
+*, body {
   padding: 0;
   margin: 0;
-  display: flex;
-  justify-content: flex-end;  /* Align links to the right */
-  height: 100%;
-  align-items: center;  /* Center navigation items vertically */
-}
-
-nav ul li {
-  margin-left: 20px;  /* Add space between links */
-}
-
-nav ul li a {
-  color: #fff;
-  text-decoration: none;
+  box-sizing: border-box;
   font-family: 'Lato', sans-serif;
-  font-size: 16px;
 }
 
-nav ul li a:hover {
+body {
+  background-color: #ffffff;
+}
+
+/* Add margin to the top of the header */
+header {
+  margin-top: 20px;
+}
+
+/* Navigation */
+.navigation-header {
+  background-color: #ffffff;
+  padding: 0 15px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-container > a {
+  color: ghostwhite;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 26px;
+}
+
+.navigation-items {
+  display: flex;
+  gap: 40px;
+}
+
+.navigation-items > a {
+  color: #131312;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  transition: .4s ease-in-out;
+}
+
+/* Underline navigation items and change the text color on hover */
+.navigation-items > a:hover {
   text-decoration: underline;
 }
 
-/* Example for the rest of your page */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
+.hamburger {
+  display: none;
+  font-size: 20px;
+  font-weight: 800;
+  color: #131312;
+}
+
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: flex;
+    cursor: pointer;
+  }
+
+  .hamburger #closeHam {
+    display: none;
+  }
+
+  .navigation-items {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    top: 58px;
+    background-color: #ffffff;
+    width: 100%;
+    height: calc(100vh - 58px);
+    padding-top: 60px;
+    gap: 10vh;
+  }
+
+  /* Intro Section */
+  section#intro {
+    background-color: #fff;
+    padding: 50px 0;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Column Layout */
+  .col-12, .col-6 {
+    width: 100%;
+  }
+}
+
+/* Base Intro Section Styles (apply universally) */
+.intro-heading {
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+  font-size: 72px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.intro-heading br {
+  display: block;
+}
+
+.intro-subheading {
+  font-family: 'Lato', sans-serif;
+  font-style: italic;
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.intro-description {
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  color: #444;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.btn-resume {
+  display: inline-block;
+  width: 131px;
+  height: 50px; /* Rectangular shape */
+  background-color: #13132e;  /* Deep, rich color */
+  color: #fff;
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 50px;  /* Centers the text vertically */
+  border-radius: 0;  /* Sharp corners */
+  transition: background-color 0.3s ease, transform 0.3s ease;  /* Smooth background and scale transition */
+  cursor: pointer;
+}
+
+.btn-resume:hover {
+  background-color: #0f0f1a;  /* Slightly darker shade on hover */
+  transform: scale(1.05);  /* Slightly enlarge the button */
+}
+
+.btn-resume:active {
+  transform: scale(1);  /* Reset scale when clicked */
+}
+
+/* Media Queries */
+
+/* For mobile screens (max-width: 768px) */
+@media (max-width: 768px) {
+  .intro-heading {
+    font-size: 60px;
+  }
+
+  .intro-subheading {
+    font-size: 14px;
+  }
+
+  .intro-description {
+    font-size: 14px;
+  }
+
+  .btn-resume {
+    width: 120px;  /* Adjust the button width for mobile */
+    font-size: 14px;
+  }
+}
+
+/* For larger screens (min-width: 1024px) */
+@media (min-width: 1024px) {
+  .col-2 {
+    width: 50%;
+  }
+
+  .intro-heading {
+    font-size: 80px;  /* Larger font size for larger screens */
+  }
+
+  .intro-subheading {
+    font-size: 18px;
+  }
+
+  .intro-description {
+    font-size: 18px;
+  }
+
+  .btn-resume {
+    width: 150px;
+    height: 50px;
+    line-height: 50px;
+  }
+}
+
+/* For extra-large screens (min-width: 1200px) */
+@media (min-width: 1200px) {
+  .col-2 {
+    width: 33.33%; /* Optional: you can adjust this if needed */
+  }
+
+  .row {
+    justify-content: flex-start;
+  }
+
+  .col-6 {
+    width: 45%;  /* Fine-tuning column widths for extra-large screens */
+  }
 }

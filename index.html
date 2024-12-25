@@ -3,35 +3,57 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My UX Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Bentham&family=Lato:ital,wght@1,400&display=swap" rel="stylesheet">
-</head>
+  <title>Responsive Navbar</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Make sure to link to your CSS file -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+  </head>
 <body>
 
-  <!-- Navigation bar -->
-  <header>
-     <div class="container">
-    <div class="logo">
-      <img src="Group 11 (1).png" alt="Logo">  <!-- Replace with the path to your logo image -->
-    </div>
-      <nav>
-        <ul>
-          <li><a href="work">Work</a></li>
-          <li><a href="about">About Me</a></li>
-          <li><a href="contact">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
+  <!-- Navigation Bar -->
+  <header class="navigation-header">
+    <nav>
+      <!-- Logo Section -->
+      <div class="logo-container">
+        <a href="#">
+          <img src="assets/Group 11 (1).png"style="width: 30px; height: auto;" />
+        </a>
+      </div>
+      
+
+      <!-- Navigation Items -->
+      <div class="navigation-items">
+        <a href="#">Work</a>
+        <a href="#">About me</a>
+        <a href="#">Contact</a>
+
+      </div>
+
+      <!-- Hamburger Icon for Mobile -->
+      <div class="hamburger" id="hamburger">
+        &#9776; <!-- Hamburger icon -->
+      </div>
+    </nav>
   </header>
+
+  <!-- JavaScript for toggling the navigation menu on mobile -->
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navigationItems = document.querySelector('.navigation-items');
+
+    hamburger.addEventListener('click', () => {
+      navigationItems.style.display = (navigationItems.style.display === 'flex' ? 'none' : 'flex');
+    });
+  </script>
 
   <!-- Intro Section -->
   <section id="intro">
     <div class="container">
       <div class="row">
         <div class="col-12 col-6">
-          <h2 class="intro-heading">HI,<br> I’m Thushara.</h2>
-          <p class="intro-subheading">Designer, Illustrator, and Human</p>
+          <h2 class="intro-heading">Hi,<br> I’m Thushara.</h2>
+          <p class="intro-subheading">Designer and Illustrator</p>
           <p class="intro-description">
             I'm a User Experience designer who is passionate about creating positive impact with a focus on balancing user and business goals.
           </p>
@@ -40,24 +62,6 @@
       </div>
     </div>
   </section>
-
-  <!-- Footer with social media icons -->
-  <footer>
-    <div class="container footer-content">
-      <p>Connect with me:</p>
-      <div class="social-icons">
-        <a href="https://www.linkedin.com/in/yourname" target="_blank">
-          <img src="linkedin-icon.png" alt="LinkedIn" class="social-icon">
-        </a>
-        <a href="https://twitter.com/yourname" target="_blank">
-          <img src="twitter-icon.png" alt="Twitter" class="social-icon">
-        </a>
-        <a href="https://www.instagram.com/yourname" target="_blank">
-          <img src="instagram-icon.png" alt="Instagram" class="social-icon">
-        </a>
-      </div>
-    </div>
-  </footer>
-
 </body>
 </html>
+
